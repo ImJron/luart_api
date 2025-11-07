@@ -1,0 +1,11 @@
+--- Sets/unsets the given function as the debug hook for all new  Task instances.
+--- When called without arguments, debug.settaskhook() turns off the hook.
+--- @param func function A function that represents the hook function.
+---@param mask "c"|"r"|"l" A string describing in which conditions the hook will be called :
+--- - 'c': the hook function is called every time the Task calls a function.
+--- - 'r': the hook function is called every time the Task returns from a function.
+--- - 'l': the hook function is called every time the Task enters a new line of code.
+---@param count? number An optional number meaning that if non-zero, the hook function will also be called after each count instructions.
+---
+---https://www.luart.org/doc/debug/settaskhook.html
+function debug.settaskhook(func, mask, count) end

@@ -538,4 +538,3 @@ function canvas:skew(anglex, angley, centerx, centery) end
 --- https://www.luart.org/doc/canvas/Canvas-translate.html
 function canvas:translate(x, y) end
 
-return canvas

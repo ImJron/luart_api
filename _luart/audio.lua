@@ -142,4 +142,3 @@ function audio.record.start(file, format, channels, samplerate, bitrate) return 
 ---[https://www.luart.org/doc/audio/record-stop.html](https://www.luart.org/doc/audio/record-stop.html)
 function audio.record.stop() return end
 
-return audio

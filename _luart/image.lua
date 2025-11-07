@@ -1,6 +1,22 @@
 ---@class Image: Object
 Image = {}
 
+---@type number
+--- ***READONLY***
+---
+--- Get the height of the Image. The height starts from 0 (top side of the Image) and increase to the bottom direction.
+---
+--- https://www.luart.org/doc/canvas/Image-height.html
+Image.height = {}
+
+---@type number
+--- ***READONLY***
+---
+--- Get the Image width. The width starts from 0 (left side of the Image) and increases to the right direction.
+---
+--- https://www.luart.org/doc/canvas/Image-width.html
+Image.width = {}
+
 ---@alias interpolation "nearest"|"linear"
 --- Draws the Image on its Canvas, at the specified position
 --- @param x number A number representing the horizontal position (zero means the left side of the Canvas)
