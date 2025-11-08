@@ -1,5 +1,5 @@
 --- @class json
-json = {}
+local json = {}
 
 --- Decode a JSON string to a Lua value, following those rules :
 --- - "string" -> "string"
@@ -44,3 +44,5 @@ function json.load(file) end
 ---
 ---https://www.luart.org/doc/json/save.html
 function json.save(file, value) end
+
+return json

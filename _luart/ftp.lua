@@ -1,6 +1,5 @@
 --- @class Ftp
-
-Ftp = {}
+local Ftp = {}
 
 ---@type string
 --- ***READ/WRITE***

@@ -1,5 +1,5 @@
 ---@class Crypto
-crypto = {}
+local crypto = {}
 
 --- @alias cipher_algorithm "aes128"|"aes192"|"aes256"|"des"|"2des"|"3des"|"rc2"|"rc4"
 
@@ -21,30 +21,30 @@ crypto = {}
 --- - "ecb": electronic codebook mode
 --- - "cts": ciphertext stealing mode
 --- @return Cipher
---- 
+---
 --- https://www.luart.org/doc/crypto/Cipher-constructor.html
 function crypto.Cipher(algorithm, key, iv, mode) end
 
 --- Calculate the Cyclic Redundancy Check (CRC) value of the given data..
 --- @param data string|Buffer
 --- @return number @Returns a number containing CRC32 checksum.
---- 
+---
 --- https://www.luart.org/doc/crypto/crc32.html
 function crypto.crc32(data) end
-
 
 --- Generate binary data with cryptographically random bytes.
 --- @param length number A number representing the length in bytes of the data to be generated.
 --- @return Buffer @Returns a  Buffer containing the random bytes.
---- 
+---
 --- https://www.luart.org/doc/crypto/generate.html
 function crypto.generate(length) end
-
 
 --- Create a hash digest of data, using the specified algorithm.
 --- @param algorithm "md5"|"sha1"|"sha256"|"sha384"|"sha512"
 --- @param data string|Buffer A string or a  Buffer that contains the data to hash.
 --- @return Buffer @Returns a  Buffer containing the hash value as bytes.
---- 
+---
 --- https://www.luart.org/doc/crypto/hash.html
 function crypto.hash(algorithm, data) end
+
+return crypto

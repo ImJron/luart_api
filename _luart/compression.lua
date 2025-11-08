@@ -1,6 +1,6 @@
 --- https://www.luart.org/doc/compression/index.html
 ---@class Compression
-Compression = {}
+local Compression = {}
 
 
 --- The deflate() function compress data using the DEFLATE algorithm.
@@ -51,3 +51,5 @@ function Compression.isZip(file) end
 ---
 ---https://www.luart.org/doc/compression/Zip-constructor.html
 function Compression.Zip(file, mode, level) end
+
+return Compression

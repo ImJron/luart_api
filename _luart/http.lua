@@ -1,5 +1,5 @@
 --- @class Http
-Http = {}
+local Http = {}
 
 
 ---@type string

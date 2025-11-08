@@ -2,7 +2,7 @@
 --- https://www.luart.org/doc/sys/index.html
 
 ---@class sys
-sys = {}
+local sys = {}
 sys.registry = {}
 
 ---@type function
@@ -242,3 +242,5 @@ function sys.Pipe(cmd) end
 ---
 --- https://www.luart.org/doc/sys/Task-constructor.html
 function sys.Task(func) end
+
+return sys

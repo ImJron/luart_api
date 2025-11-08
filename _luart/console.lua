@@ -1,5 +1,5 @@
 ---@class Console
-Console = {}
+local Console = {}
 --- @alias console_color "black"| "blue"| "green"| "cyan"| "red"| "purple"| "yellow"| "white"| "gray"| "lightblue"| "lightgreen"| "lightcyan"| "lightred"| "lightmagenta"| "lightyellow"| "brightwhite"
 
 ---@type console_color
@@ -243,3 +243,5 @@ function Console.writecolor(color) end
 ---
 --- https://www.luart.org/doc/console/writeln.html
 function Console.writeln(str1) end
+
+return Console

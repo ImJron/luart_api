@@ -1,5 +1,5 @@
 ---@class File
-File = {}
+local File = {}
 
 ---@type Datetime
 --- ***READ/WRITE***

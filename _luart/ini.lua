@@ -1,5 +1,5 @@
 ---@class ini
-ini = {}
+local ini = {}
 
 --- Decode an ini string to a Lua table
 --- @param string string ini string to be decoded.
@@ -33,3 +33,5 @@ function ini.load(file) end
 ---
 --- https://www.luart.org/doc/ini/save.html
 function ini.save(file, table) end
+
+return ini

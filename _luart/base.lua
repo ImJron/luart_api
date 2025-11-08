@@ -17,8 +17,10 @@ function async(task, ...) end
 function await(task, ...) end
 
 --- Returns an iterator function that iterates over the values of a table or Object.
----@param iterable table|Object A table or an Object to iterate on.
----@return function @This function returns an iterator function, that when called (or better inside a for..do loop) will get the next value from the iterable variable.
+---@generic T: table, K, V
+---@param iterable T
+---@return fun(table: table<V>, index?: K):V
+---@return T
 --- [https://www.luart.org/doc/base/each.html](https://www.luart.org/doc/base/each.html)
 function each(iterable) end
 

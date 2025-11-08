@@ -1,6 +1,6 @@
 --- https://www.luart.org/doc/sys/Pipe.html
 ---@class Pipe
-Pipe = {}
+local Pipe = {}
 
 --- Closes the Pipe and the associated process. Any further read/write/readerror operations won't achieve.
 --- 

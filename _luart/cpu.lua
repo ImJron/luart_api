@@ -1,11 +1,11 @@
 ---@class cpu
-cpu = {}
+local cpu = {}
 
 ---@type table
 --- ***READONLY***
 ---
 --- This property gets different cache levels and their size (in kb). The returned table with the cache identifier as a key, and its size as value.
---- 
+---
 --- https://www.luart.org/doc/cpu/cache.html
 cpu.cache = {}
 
@@ -14,7 +14,7 @@ cpu.cache = {}
 --- ***READONLY***
 ---
 --- The cpu.clock property gets the theorical frequency in Mhz.
---- 
+---
 --- https://www.luart.org/doc/cpu/clock.html
 cpu.clock = {}
 
@@ -23,9 +23,9 @@ cpu.clock = {}
 --- ***READONLY***
 ---
 --- The cpu.cores property gets the number of physical cpu cores.
---- 
---- https://www.luart.org/doc/cpu/cores.html 
-cpu.cores  = {}
+---
+--- https://www.luart.org/doc/cpu/cores.html
+cpu.cores = {}
 
 
 
@@ -33,7 +33,7 @@ cpu.cores  = {}
 --- ***READONLY***
 ---
 --- The cpu.currentclock property gets the current cpu frequency in Mhz.
---- 
+---
 --- https://www.luart.org/doc/cpu/currentclock.html
 cpu.currentclock = {}
 
@@ -50,7 +50,7 @@ cpu.currentclock = {}
 --- - SSE4.2: true if the cpu supports SSE4.2 instruction set, or false otherwise.
 --- - AVX: true if the cpu supports AVX instruction set, or false otherwise.
 --- - AVX2: true if the cpu supports AVX2 instruction set, or false otherwise.
---- 
+---
 --- https://www.luart.org/doc/cpu/features.html
 cpu.features = {}
 
@@ -59,7 +59,7 @@ cpu.features = {}
 --- ***READONLY***
 ---
 --- The cpu.name property gets the human-readable name of the cpu.
---- 
+---
 --- https://www.luart.org/doc/cpu/name.html
 cpu.name = {}
 
@@ -69,7 +69,7 @@ cpu.name = {}
 --- ***READ/WRITE***
 ---
 --- The cpu.priority property get or set the current process and thread (the one executing Luart) scheduling priority.
---- 
+---
 --- https://www.luart.org/doc/cpu/priority.html
 cpu.priority = {}
 
@@ -78,7 +78,7 @@ cpu.priority = {}
 --- ***READONLY***
 ---
 --- The cpu.threads property gets the number hardware threads.
---- 
+---
 --- https://www.luart.org/doc/cpu/threads.html
 cpu.threads = {}
 
@@ -86,7 +86,7 @@ cpu.threads = {}
 --- ***READONLY***
 ---
 --- The cpu.usage property gets the current cpu usage in percent.
---- 
+---
 --- https://www.luart.org/doc/cpu/usage.html
 cpu.usage = {}
 
@@ -95,6 +95,8 @@ cpu.usage = {}
 --- ***READONLY***
 ---
 --- The cpu.currentclock property gets the cpu manufacturer identifier.
---- 
+---
 --- https://www.luart.org/doc/cpu/vendor.html
 cpu.vendor = {}
+
+return cpu

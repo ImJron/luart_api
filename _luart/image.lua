@@ -1,5 +1,5 @@
 ---@class Image: Object
-Image = {}
+local Image = {}
 
 ---@type number
 --- ***READONLY***

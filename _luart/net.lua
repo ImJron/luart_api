@@ -1,11 +1,11 @@
 --- @class net
-net = {}
+local net = {}
 
 ---@type string
 --- ***READONLY***
 ---
 --- The net.error property gets the last network error message or nil
---- 
+---
 --- https://www.luart.org/doc/net/error.html
 net.error = {}
 
@@ -14,7 +14,7 @@ net.error = {}
 --- ***READONLY***
 ---
 --- net.ip returns a string
---- 
+---
 --- https://www.luart.org/doc/net/ip.html
 net.ip = {}
 
@@ -23,7 +23,7 @@ net.ip = {}
 --- ***READONLY***
 ---
 --- The net.isalive property checks if a network connection is available, returning true or false otherwise.
---- 
+---
 --- https://www.luart.org/doc/net/isalive.html
 net.isalive = {}
 
@@ -32,7 +32,7 @@ net.isalive = {}
 --- ***READONLY***
 ---
 --- The net.publicip property gets the current public IPv4 address as a string. A valid Internet connection must be available, or returns false otherwise.
---- 
+---
 --- https://www.luart.org/doc/net/publicip.html
 net.publicip = {}
 
@@ -43,20 +43,18 @@ net.publicip = {}
 --- @return function @Returns an iterator function to be used in a for loop, to iterate over network adapters, returning two values at each iteration :
 --- - A string, representing the name of the adapter.
 --- - A table, that contains the list of all the IP associated with the adapter.
---- 
+---
 --- https://www.luart.org/doc/net/adapters.html
 function net.adapters(family) end
-
 
 --- Returns the fully qualified domain from an IP address (reverse DNS lookup).
 --- @param value File|string The value to retrieve the MIME type from, can be any of the following values :
 --- - A  File value.
 --- - A string representing an URI or a filename.
 --- @return string @Return a string representing the fully qualified MIME type, or nil if the MIME type cannot be found.
---- 
+---
 --- https://www.luart.org/doc/net/getmime.html
 function net.getmime(value) end
-
 
 --- Resolves the given hostname to an IP address from the DNS record.
 --- @param hostname string The string to indicate the hostname to resolve, for example "luart.org".https://www.luart.org/doc/net/index.html?methods
@@ -67,18 +65,16 @@ function net.getmime(value) end
 --- - In case of success, returns the IP address associated with the DNS record, represented by a string.
 --- - If no DNS record was found, returns nil
 --- - In case of error, returns false (you can check error message with the net.error property).
---- 
+---
 --- https://www.luart.org/doc/net/resolve.html
 function net.resolve(hostname, family) end
-
 
 --- Returns the fully qualified domain from an IP address (reverse DNS lookup).
 --- @param ip string The IPv4 or IPv6 address to perform the reverse DNS lookup.
 --- @return string @Return a string representing the fully qualified hostname.
---- 
+---
 --- https://www.luart.org/doc/net/reverse.html
 function net.reverse(ip) end
-
 
 --- Check for network events (readability, writability and errors) on the provided array of Sockets, by updating their corresponding properties Socket.canread, Socket.canwrite, Socket.failed.
 --- @param socket_array table A table containing an array of Sockets to check for network events.
@@ -87,18 +83,16 @@ function net.reverse(ip) end
 --- In case of success, returns true.
 --- - In case of error, returns false (you can check error message with the net.error property).
 --- - If no networking event occured and the time limit expired, returns nil
---- 
+---
 --- https://www.luart.org/doc/net/select.html
 function net.select(socket_array, timeout) end
-
 
 --- Returns an URL-encoded string, so that it can be safely transmitted over the internet
 --- @param str string The string to URL-encode.
 --- @return string @Return a URL-encoded string.
---- 
+---
 --- https://www.luart.org/doc/net/urlencode.html
 function net.urlencode(str) end
-
 
 --- Parse a URL into 4 components, corresponding to the structure of a URL : scheme://hostname /path?parameters
 --- @param url string A string representing a URL to parse, for example "https://www.luart.org/index.html".
@@ -106,11 +100,11 @@ function net.urlencode(str) end
 --- @return string hostname
 --- @return string path
 --- @return string parameters
---- 
+---
 --- Returns 4 strings, representing the scheme, the hostname, the path, and the parameters fields of the URL.
 --- If any component is not found, returns a nil value instead of a string.
 --- If the string cannot be parsed, returns false.
---- 
+---
 --- https://www.luart.org/doc/net/urlparse.html
 function net.urlparse(url) end
 
@@ -123,10 +117,24 @@ function net.urlparse(url) end
 --- https://www.luart.org/doc/net/Ftp-constructor.html
 function net.Ftp(hostname, username, password) end
 
-
 --- The Http constructor returns a Http value representing a HTTP client and connect it to the HTTP server at the given URL, using optional basic authentication.
 --- @param url string A string representing a valid URL to connect to the HTTP server.
 --- @param username? string An optional string representing a username for basic HTTP authentication.
 --- @param password? string An optional string representing a password for basic HTTP authentication.
 --- @return Http
+---
+--- https://www.luart.org/doc/net/Http-constructor.html
 function net.Http(url, username, password) end
+
+--- The Socket constructor returns a Socket value representing a Windows TCP socket to be bound to a specific IP address or hostname on the given port number. In case of hostname, a DNS query is sent to be resolved to a valid IP of the given family.
+--- @param host string A string representing an IP address (family is autodetected) or a hostname (IP is autoresolved to the given family)
+--- @param port number The port number the Socket will be bound to.
+--- @param family? net_family An optional string to specify the address family when resolving the provided hostname.
+--- - "ipv4" : an IPv4 address will be used when resolving the hostname (default)
+--- - "ipv6" : an IPv6 address will be used when resolving the hostname
+--- @return Socket
+---
+--- https://www.luart.org/doc/net/Socket-constructor.html
+function net.Socket(host, port, family) end
+
+return net

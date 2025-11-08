@@ -1,5 +1,5 @@
 ---@class Task
-Task = {}
+local Task = {}
 
 ---@type function
 --- ***READ/WRITE***

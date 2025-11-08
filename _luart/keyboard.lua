@@ -1,5 +1,5 @@
 ---@class Keyboard
-keyboard = {}
+local keyboard = {}
 
 --- Binds a key to a Lua callback function, called each time the specified key is pressed.
 --- @param key string|number A string or number representing the key to wait for. See [the list of supported key codes](https://www.luart.org/doc/keyboard/keys.html)
@@ -68,3 +68,5 @@ function keyboard.tostring() end
 ---
 --- https://www.luart.org/doc/keyboard/waitfor.html
 function keyboard.waitfor(key) end
+
+return keyboard

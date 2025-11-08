@@ -1,8 +1,7 @@
-
 ---@class Buffer
 ---@alias buffer_encoding "utf8"|"unicode"|"base64"|"hex"
 --- https://www.luart.org/doc/sys/Buffer.html
-Buffer = {}
+local Buffer = {}
 
 ---@type buffer_encoding
 ---***READ/WRITE***

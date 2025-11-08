@@ -1,9 +1,19 @@
+---@class vector3
+---@field x number
+---@field y number
+---@field z number
+
+---@class cone
+---@field inangle number
+---@field outangle number
+---@field outgain number 
+
 ---@alias audioFormat "wav"|"mp3"|"aac"
 ---@class audio
 ---The audio module plays and records audio using any audio device
 ---
 --- [https://www.luart.org/doc/audio/index.html](https://www.luart.org/doc/audio/index.html)
-audio = {}
+local audio = {}
 audio.record = {}
 
 ---@type number
@@ -15,7 +25,7 @@ audio.record = {}
 ---[https://www.luart.org/doc/audio/channels.html](https://www.luart.org/doc/audio/channels.html)
 audio.channels = 0
 
----@type table
+---@type cone
 --- ***READ/WRITE***
 ---
 ---Get or set the listener cone, that controls how sound is attenuated based on the listener's direction
@@ -23,7 +33,6 @@ audio.channels = 0
 ---[https://www.luart.org/doc/audio/cone.html](https://www.luart.org/doc/audio/cone.html)
 audio.cone = {}
 
----@type table
 --- ***READONLY***
 ---
 --- Get the list of detected audio devices, as a table, that contains the following fields :
@@ -39,7 +48,7 @@ audio.devices = {
     recording = {}
 }
 
----@type table
+---@type vector3
 --- ***READ/WRITE***
 ---
 --- Get or set the listener direction in the world
@@ -64,7 +73,7 @@ audio.gain = {}
 audio.playdevice = {}
 
 
----@type table
+---@type vector3
 --- ***READ/WRITE***
 ---
 --- Get or set the listener position in the world
@@ -90,7 +99,7 @@ audio.recdevice = {}
 audio.samplerate = {}
 
 
----@type table
+---@type vector3
 --- ***READ/WRITE***
 ---
 --- Get or set the listener current velocity (speed and direction)
@@ -108,7 +117,7 @@ audio.velocity = {}
 audio.volume = {}
 
 
----@type table
+---@type vector3
 --- ***READ/WRITE***
 ---
 --- Get or set the listener worldup
@@ -142,3 +151,19 @@ function audio.record.start(file, format, channels, samplerate, bitrate) return 
 ---[https://www.luart.org/doc/audio/record-stop.html](https://www.luart.org/doc/audio/record-stop.html)
 function audio.record.stop() return end
 
+---The Sound constructor returns a Sound instance representing a binary sample data loaded from a file.
+--- The audio module support the following file types :
+--- - WAV (Waveform Audio file format) *.wav
+--- - MP3 (Moving Picture Experts Group Layer 3) *.mp3
+--- - FLAC (Free Lossless Audio Codec) *.flac
+--- - OGG VORBIS *.ogg
+---@param file File|string A  File or a filename as a string representing the file to load the sound from.
+---@param nodecoding? boolean A boolean value that prevent decoding of the binary sample when set to true.The sound will be decoded later (with a risk of performance hit). If set to false (the default value), the binary sample will be decoded during load time.
+---@param nopitch? boolean A boolean value that prevent using pitching/doppler effect on the sound when set to true (provides better optimization). If set to false (the default value), pitching and doppler effect will be available for this sound.
+---@param nospatial? boolean A boolean value that prevent to use spatialization on the sound when set to true (provides better optimization). If set to false (the default value), spatialization will be available for this sound.
+---@return Sound
+---
+---https://www.luart.org/doc/audio/Sound-constructor.html
+function audio.Sound(file, nodecoding, nopitch, nospatial) end
+
+return audio

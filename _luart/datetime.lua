@@ -1,12 +1,12 @@
 ---@class Datetime
 ---https://www.luart.org/doc/sys/Datetime.html
-Datetime = {}
+local Datetime = {}
 
 ---@type string
 --- ***READONLY***
 ---
 --- The Datetime.date property returns a string representing the "date part" of the moment, in the current local short format.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-date.html
 Datetime.date = {}
 
@@ -16,7 +16,7 @@ Datetime.date = {}
 ---
 --- The Datetime.day property returns a number representing the day of the month. Valid values are from 1 through 31.
 --- - Setting the day property with a value lower or higher will throw an error.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-day.html
 Datetime.day = {}
 
@@ -25,7 +25,7 @@ Datetime.day = {}
 --- ***READONLY***
 ---
 --- The Datetime.dayname property returns a string representing the name of the day of the moment, in the current local.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-dayname.html
 Datetime.dayname = {}
 
@@ -36,7 +36,7 @@ Datetime.dayname = {}
 ---
 --- The Datetime.hour property returns a number representing the hour of the moment. Valid values are from 0 through 23.
 --- - Setting the hour property with a value lower or higher will throw an error.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-hour.html
 Datetime.hour = {}
 
@@ -46,18 +46,18 @@ Datetime.hour = {}
 ---
 --- The Datetime.milliseconds property returns a number representing the milliseconds of the moment. Valid values are from 0 through 999.
 --- - Setting the milliseconds property with a value lower or higher will throw an error.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-milliseconds.html
 Datetime.milliseconds = {}
 
 
 
----@type number 
+---@type number
 --- ***READ/WRITE***
 ---
 --- The Datetime.minute property returns a number representing the minutes of the moment. Valid values are from 0 through 59.
 --- - Setting the minute property with a value lower or higher will throw an error.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-minute.html
 Datetime.minute = {}
 
@@ -66,7 +66,7 @@ Datetime.minute = {}
 --- ***READ/WRITE***
 ---
 --- The Datetime.month property returns a number representing the month of the moment. Valid values are from 1 through 12.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-month.html
 Datetime.month = {}
 
@@ -75,17 +75,17 @@ Datetime.month = {}
 --- ***READONLY***
 ---
 --- The Datetime.monthname property returns a string representing the name of the month of the moment, in the current local.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-monthname.html
 Datetime.monthname = {}
 
 
----@type number 
+---@type number
 --- ***READ/WRITE***
 ---
 --- The Datetime.second property returns a number representing the second of the moment. Valid values are from 0 through 59.
 --- - Setting the second property with a value lower or higher will throw an error
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-second.html
 Datetime.second = {}
 
@@ -94,7 +94,7 @@ Datetime.second = {}
 --- ***READONLY***
 ---
 --- The Datetime.time property returns a string representing the "time part" of the moment, in the current local short format.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-time.html
 Datetime.time = {}
 
@@ -110,9 +110,9 @@ Datetime.time = {}
 --- 1. Thursday
 --- 1. Friday
 --- 1. Saturday
---- 
+---
 --- - Setting the weekday property with a value lower or higher will throw an error.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-weekday.html
 Datetime.weekday = {}
 
@@ -122,7 +122,7 @@ Datetime.weekday = {}
 ---
 --- The Datetime.year property returns a number representing the year of the moment. Valid values are from 1601 through 30827.
 --- - Setting the year property with a value lower or higher will throw an error.
---- 
+---
 --- https://www.luart.org/doc/sys/Datetime-year.html
 Datetime.year = {}
 
@@ -139,11 +139,9 @@ Datetime.year = {}
 --- - Seconds : "s" or "ss" with a leading zero
 --- - Time marker : "t or "tt" for AM/PM time marker.
 --- @return string
---- 
+---
 ---https://www.luart.org/doc/sys/Datetime-format.html
 function Datetime:format(dateformat, timeformat) end
-
-
 
 ---Returns an interval with the from Datetime value, expressed by default in days.
 ---@alias expressed "seconds"|"minutes"|"hours"|"days"|"months"|"years"

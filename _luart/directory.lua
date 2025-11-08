@@ -1,5 +1,5 @@
 ---@class Directory
-Directory = {}
+local Directory = {}
 
 ---@type Datetime
 --- ***READ/WRITE***
