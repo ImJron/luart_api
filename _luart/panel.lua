@@ -233,7 +233,7 @@ function Panel:onHide() end
 function Panel:onHover(x, y, buttons) end
 
 --- This event is fired when a key was pressed.
---- @param key string A string that represent the key name.
+--- @param key WindowsVirtualKey A string that represent the key name.
 --- Key names are defined by the following rules:
 --- - For digit keys 0..9, the name is the digit as a string : "0", "1" ...
 --- - For alphabetical keys A..Z, the name is the character as a string : "A", "B" ...

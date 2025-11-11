@@ -462,6 +462,7 @@ function ui.Tree(parent, items, x, y, width, height) end
 --- @param width? number An optional number that indicates the Window width, in pixels, defaulting to 640.
 --- @param height? number An optional number that indicates the Window height, in pixels, defaulting to 480.
 --- - The width and height arguments represent the size of the client area of window, excluding borders and title bar.
+--- @overload fun(title: string, style?: window_style, width?: number, height?: number): Window
 --- @return Window
 ---
 --- https://www.luart.org/doc/ui/Window-constructor.html

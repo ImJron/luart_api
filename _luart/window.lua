@@ -1,6 +1,7 @@
 --- @class Window
 local Window = {}
 
+---@alias WindowsVirtualKey "VK_DIVIDE"|"VK_OEM_AUTO"|"VK_VOLUME_MUTE"|"VK_CAPITAL"|"F"|"VK_PA1"|"J"|"S"|"H"|"VK_LSHIFT"|"VK_OEM_FJ_TOUROKU"|"VK_SELECT"|"VK_RSHIFT"|"K"|"VK_LAUNCH_MAIL"|"VK_OEM_CLEAR"|"2"|"VK_OEM_PA1"|"VK_OEM_FJ_ROYA"|"VK_END"|"VK_NUMPAD2"|"VK_LWIN"|"VK_ADD"|"VK_OEM_102"|"VK_LAUNCH_MEDIA_SELECT"|"VK_MENU"|"VK_XBUTTON1"|"7"|"VK_LCONTROL"|"VK_ZOOM"|"VK_NUMPAD4"|"VK_RIGHT"|"VK_OEM_ENLW"|"VK_INSERT"|"VK_OEM_BACKTAB"|"VK_DECIMAL"|"VK_PAUSE"|"VK_F24"|"VK_NUMPAD7"|"VK_NUMPAD6"|"VK_BROWSER_REFRESH"|"VK_PROCESSKEY"|"VK_CANCEL"|"VK_F4"|"VK_NUMPAD1"|"I"|"VK_OEM_7"|"VK_F9"|"VK_PRIOR"|"VK_LBUTTON"|"VK_MEDIA_PREV_TRACK"|"VK_OEM_5"|"VK_OEM_FJ_MASSHOU"|"C"|"Y"|"VK_OEM_8"|"G"|"VK_ICO_CLEAR"|"VK_LMENU"|"Z"|"X"|"VK_OEM_AX"|"VK_OEM_FINISH"|"VK_NUMLOCK"|"VK_F7"|"VK_F16"|"VK_NUMPAD0"|"8"|"VK_F21"|"VK_TAB"|"1"|"VK_SPACE"|"VK_ICO_HELP"|"VK_F3"|"U"|"VK_MBUTTON"|"VK_OEM_RESET"|"VK_EXECUTE"|"4"|"VK_SNAPSHOT"|"3"|"VK_OEM_PA3"|"VK_BROWSER_BACK"|"5"|"VK_OEM_6"|"6"|"VK_F19"|"VK_ABNT_C1"|"VK_OEM_COMMA"|"VK_OEM_WSCTRL"|"9"|"VK_OEM_FJ_LOYA"|"VK_ABNT_C2"|"VK_OEM_3"|"VK_BROWSER_STOP"|"VK_PRINT"|"W"|"VK_RCONTROL"|"VK_APPS"|"VK_XBUTTON2"|"VK_OEM_PLUS"|"VK_NUMPAD9"|"VK_MULTIPLY"|"VK_F8"|"VK_RWIN"|"VK_JUNJA"|"VK_SCROLL"|"VK_RMENU"|"VK_OEM_FJ_JISHO"|"VK_BROWSER_SEARCH"|"O"|"VK_LEFT"|"VK_F12"|"VK_UP"|"VK_ESCAPE"|"E"|"VK_CONVERT"|"VK_F18"|"VK_F20"|"VK_KANJI"|"VK_NUMPAD3"|"VK_NUMPAD5"|"VK_MODECHANGE"|"VK_F15"|"VK_SUBTRACT"|"VK_MEDIA_NEXT_TRACK"|"VK_NONCONVERT"|"VK_SEPARATOR"|"VK_OEM_1"|"VK_BROWSER_FAVORITES"|"VK_BROWSER_FORWARD"|"VK_OEM_4"|"N"|"VK_VOLUME_DOWN"|"VK_MEDIA_PLAY_PAUSE"|"VK_F10"|"VK_F6"|"VK_LAUNCH_APP1"|"VK_LAUNCH_APP2"|"VK_F2"|"VK_HELP"|"VK_OEM_2"|"VK_VOLUME_UP"|"VK_F13"|"VK_FINAL"|"P"|"D"|"A"|"VK_PACKET"|"VK_ACCEPT"|"B"|"VK_OEM_PA2"|"VK_KANA"|"VK_OEM_JUMP"|"VK_F22"|"VK_HOME"|"VK_EREOF"|"VK_F17"|"VK_BROWSER_HOME"|"VK_DELETE"|"VK_BACK"|"VK_OEM_PERIOD"|"VK_CONTROL"|"Q"|"VK_OEM_MINUS"|"VK_ATTN"|"L"|"M"|"VK_PLAY"|"VK_F23"|"VK_RETURN"|"VK_CRSEL"|"VK_OEM_ATTN"|"VK_RBUTTON"|"VK_SLEEP"|"R"|"VK_OEM_CUSEL"|"VK_F14"|"0"|"VK_EXSEL"|"VK_OEM_COPY"|"VK_CLEAR"|"VK_F11"|"VK_NUMPAD8"|"VK_F1"|"VK_F5"|"VK_DOWN"|"V"|"VK_MEDIA_STOP"|"T"|"VK_NEXT"|"VK_SHIFT"
 ---@alias ui_alignment "all"|"bottom"|"top"|"right"|"left"
 ---@alias ui_cursor "arrow"|"cross"|"working"|"hand"|"help"|"ibeam"|"forbidden"|"cardinal"|"horizontal"|"vertical"|"leftdiagonal"|"rightdiagonal"|"up"|"wait"|"none"
 
@@ -426,7 +427,7 @@ function Window:onHide() end
 function Window:onHover(x, y, buttons) end
 
 --- This event is fired when a key was pressed.
---- @param key string A string that represent the key name.
+--- @param key WindowsVirtualKey A string that represent the key name.
 --- Key names are defined by the following rules:
 --- - For digit keys 0..9, the name is the digit as a string : "0", "1" ...
 --- - For alphabetical keys A..Z, the name is the character as a string : "A", "B" ...
