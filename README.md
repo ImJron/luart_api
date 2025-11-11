@@ -10,7 +10,7 @@ The API information is updated manually based on the [LuaRT wiki](https://www.lu
 
 ## Getting Started
 
-Simply grab the latest release, and drop the "_luart" folder at the top of your project root. Thats it!
+Simply drop the "_luart" folder at the top of your project root. Thats it!
 
 ![](https://raw.githubusercontent.com/ImJron/luart_api/refs/heads/main/autocomplete.gif?token=GHSAT0AAAAAADKO2LWENCJGBICEO3SSSTQ62IS2EYA)
 ## Credits
