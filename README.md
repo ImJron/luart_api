@@ -4,6 +4,8 @@
 
 The complete API documentation of [LuaRT](https://luart.org/) contained in a Lua table, fully annotated for autocomplete using the Lua Language Server.
 
+This allows for a more comfortable way to experiment with LuaRT, and hopefully encourages a more engaging way to write code for it!
+
 The API information is updated manually based on the [LuaRT wiki](https://www.luart.org/doc/modules.html). Therefore there is no guarantee that everything is correct and up to date.
 
 ---
