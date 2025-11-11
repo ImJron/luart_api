@@ -273,6 +273,17 @@ function ui.Button(parent, caption, x, y, width, height) end
 ---  https://www.luart.org/doc/ui/Calendar-constructor.html
 function ui.Calendar(parent, x, y, width, height) end
 
+--- The Canvas constructor returns a Canvas instance representing a drawing surface.
+--- @param parent Window|Groupbox|TabItem|Panel
+--- @param x? number An optional number that indicates the Canvas horizontal position, in pixels.
+--- @param y? number An optional number that indicates the Canvas vertical position, in pixels.
+--- @param width? number An optional number that indicates the Canvas width, in pixels.
+--- @param height? number An optional number that indicates the Canvas height, in pixels.
+--- @return Canvas
+---
+--- https://www.luart.org/doc/ui/Canvas-constructor.html
+function ui.Canvas(parent, x, y, width, height) end
+
 --- The Checkbox constructor returns a Checkbox value representing a push checkbox on the parent object.
 --- - Selecting one Checkbox will not affect any other, as Checkboxes are non-exclusive
 --- @param parent Window|Groupbox|TabItem|Panel
