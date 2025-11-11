@@ -281,7 +281,7 @@ function ui.Calendar(parent, x, y, width, height) end
 --- @param height? number An optional number that indicates the Canvas height, in pixels.
 --- @return Canvas
 ---
---- https://www.luart.org/doc/ui/Canvas-constructor.html
+--- https://www.luart.org/doc/canvas/Canvas-constructor.html
 function ui.Canvas(parent, x, y, width, height) end
 
 --- The Checkbox constructor returns a Checkbox value representing a push checkbox on the parent object.
