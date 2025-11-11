@@ -6,7 +6,7 @@
 ---@class cone
 ---@field inangle number
 ---@field outangle number
----@field outgain number 
+---@field outgain number
 
 ---@alias audioFormat "wav"|"mp3"|"aac"
 ---@class audio

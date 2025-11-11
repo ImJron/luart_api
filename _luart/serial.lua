@@ -9,5 +9,4 @@ local Serial = {}
 --- https://www.luart.org/doc/serial/Port-constructor.html
 function Serial.Port(port) end
 
-
 return Serial

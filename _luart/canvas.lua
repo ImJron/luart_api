@@ -11,7 +11,7 @@
 ---The Canvas constructor returns a Canvas instance representing a drawing surface.
 ---
 ---https://www.luart.org/doc/canvas/Canvas-constructor.html
-canvas = {}
+local canvas = {}
 
 ---@alias canvas_alignment "all"|"bottom"|"top"|"right"|"left"
 ---@type canvas_alignment
@@ -168,21 +168,21 @@ canvas.y = {}
 function canvas:onClick(x, y) end
 
 --- This event is fired when the user has clicked on the Canvas with the right mouse button.
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-onContext.html
 function canvas:onContext() end
 
 --- This event is fired when the Canvas object has just been created (just after the Canvas:constructor() call).
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-onCreate.html
 function canvas:onCreate() end
 
 --- This event is fired when the Canvas is hidden (with a call to Canvas:hide() or setting the Canvas.visible property to false).
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-onHide.html
 function canvas:onHide() end
 
---- @class canvas_buttons
+--- @class ui_buttons
 --- @field left boolean
 --- @field right boolean
 --- @field middle boolean
@@ -191,8 +191,8 @@ function canvas:onHide() end
 
 --- This event is fired when the user moves the mouse pointer over the Canvas.
 --- @param x number
----@param y number
----@param buttons canvas_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
+--- @param y number
+--- @param buttons ui_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
 --- - "left": true if left mouse button is pressed, false otherwise
 --- - "right": true if right mouse button is pressed, false otherwise
 --- - "middle": true if middle mouse button is pressed, false otherwise
@@ -203,14 +203,14 @@ function canvas:onHide() end
 function canvas:onHover(x, y, buttons) end
 
 --- This event is fired when the mouse cursor leaves the Canvas.
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-onLeave.html
 function canvas:onLeave() end
 
 --- This event is fired when the user press a mouse button while being over the Canvas.
 ---@param x number
 ---@param y number
----@param buttons canvas_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
+---@param buttons ui_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
 --- - "left": true if left mouse button is pressed, false otherwise
 --- - "right": true if right mouse button is pressed, false otherwise
 --- - "middle": true if middle mouse button is pressed, false otherwise
@@ -223,7 +223,7 @@ function canvas:onMouseDown(x, y, buttons) end
 ---This event is fired when the user releases a mouse button while being over the Canvas.
 ---@param x number
 ---@param y number
----@param buttons canvas_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
+---@param buttons ui_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
 --- - "left": true if left mouse button is pressed, false otherwise
 --- - "right": true if right mouse button is pressed, false otherwise
 --- - "middle": true if middle mouse button is pressed, false otherwise
@@ -236,23 +236,23 @@ function canvas:onMouseUp(x, y, buttons) end
 --- This event is fired when the user rotates the mouse wheel while being over the Canvas.
 --- @param delta number A number that indicates the distance the wheel is rotated, expressed in multiples or divisions of 120.
 --- A positive value indicates that the wheel was rotated forward, away from the user, a negative value indicates that the wheel was rotated backward, toward the user.
----@param buttons canvas_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
+---@param buttons ui_buttons A table which fields indicates if mouse buttons or special keys have been pressed during the move :
 --- - "left": true if left mouse button is pressed, false otherwise
 --- - "right": true if right mouse button is pressed, false otherwise
 --- - "middle": true if middle mouse button is pressed, false otherwise
 --- - "control": true if the CONTROL key is pressed, false otherwise
 --- - "shift": true if the SHIFT mouse button is pressed, false otherwise
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-onMouseWheel.html
 function canvas:onMouseWheel(delta, buttons) end
 
 --- This event is fired continuously to redraw the Canvas. You can put all your drawing operations inside this event handler function.
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-onPaint.html
 function canvas:onPaint() end
 
 --- This event is fired when the Canvas is shown (with a call to Canvas:show() or setting the Canvas.visible property to true).
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-onShow.html
 function canvas:onShow() end
 
@@ -424,17 +424,17 @@ function canvas:fillroundrect(x0, y0, x1, y1, radiusx, radiusy, brush) end
 function canvas:line(x0, y0, x1, y1, brush, width) end
 
 --- Flips the back buffer, displaying it on the Canvas.
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-flip.html
 function canvas:flip() end
 
 --- Hide the Canvas widget.
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-hide.html
 function canvas:hide() end
 
 --- Resets the Canvas transformation to the default identity matrix
---- 
+---
 --- https://www.luart.org/doc/canvas/Canvas-identity.html
 function canvas:identity() end
 
@@ -538,3 +538,4 @@ function canvas:skew(anglex, angley, centerx, centery) end
 --- https://www.luart.org/doc/canvas/Canvas-translate.html
 function canvas:translate(x, y) end
 
+return canvas

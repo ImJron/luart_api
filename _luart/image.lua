@@ -1,4 +1,4 @@
----@class Image: Object
+---@class Image
 local Image = {}
 
 ---@type number

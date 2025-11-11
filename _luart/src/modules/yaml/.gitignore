@@ -1,7 +1,0 @@
-*.dll
-*.exp
-*.ilk
-*.obj
-!lib/*.lib
-*.pdb
-*.res
